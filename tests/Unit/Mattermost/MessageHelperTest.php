@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Test\Unit\Mattermost;
 
-use App\MessageHelper;
+use MagDv\Mattermost\MessageHelper;
 use PHPUnit\Framework\TestCase;
 
 class MessageHelperTest extends TestCase

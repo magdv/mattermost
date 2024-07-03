@@ -17,10 +17,10 @@ Here is an example of usage.
 --------------------
 
 ```php
-        use App\Attachment;
-        use App\Message;
-        use App\WebhookClient;
-        use App\WebhookParams;
+        use MagDv\Mattermost\Attachment;
+        use MagDv\Mattermost\Message;
+        use MagDv\Mattermost\WebhookClient;
+        use MagDv\Mattermost\WebhookParams;
         use GuzzleHttp\Client;
         
         // Any PSR7 Client
