@@ -36,7 +36,8 @@ class Responses
                 'X-Request-Id' => 'kse58tx8r3ftu8ymwzehnoft4h',
                 'X-Version-Id' => '5.27.0.5.27.1.ebae422b86b135f696cc67345137d193.false',
                 'Date' => 'Fri, 04 Dec 2020 14:10:57 GMT'
-            ]
+            ],
+            'какой - то ответ'
         );
     }
 
@@ -52,7 +53,8 @@ class Responses
                 'X-Request-Id' => 'kse58tx8r3ftu8ymwzehnoft4h',
                 'X-Version-Id' => '5.27.0.5.27.1.ebae422b86b135f696cc67345137d193.false',
                 'Date' => 'Fri, 04 Dec 2020 14:10:57 GMT'
-            ]
+            ],
+            'какой - то ответ'
         );
     }
 }
