@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MagDv\Mattermost;
 
 class MattermostException extends \DomainException
 {

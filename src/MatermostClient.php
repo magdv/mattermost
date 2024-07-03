@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MagDv\Mattermost;
 
 use Psr\Http\Client\ClientInterface;
 

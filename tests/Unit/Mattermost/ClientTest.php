@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Test\Unit\Mattermost;
 
-use App\Attachment;
-use App\MatermostClient;
-use App\Message;
+use MagDv\Mattermost\Attachment;
+use MagDv\Mattermost\MatermostClient;
+use MagDv\Mattermost\Message;
 use PHPUnit\Framework\TestCase;
 use Test\Helpers\MockResponseHelper;
 use Test\Helpers\Responses;

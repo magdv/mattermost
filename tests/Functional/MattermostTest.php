@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Test\Functional;
 
-use App\Attachment;
-use App\AttachmentFactory;
-use App\MatermostClient;
-use App\MattermostClientInterface;
-use App\Message;
-use App\MessageHelper;
-use App\Text;
+use MagDv\Mattermost\Attachment;
+use MagDv\Mattermost\AttachmentFactory;
+use MagDv\Mattermost\MatermostClient;
+use MagDv\Mattermost\MattermostClientInterface;
+use MagDv\Mattermost\Message;
+use MagDv\Mattermost\MessageHelper;
+use MagDv\Mattermost\Text;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 
@@ -29,7 +29,7 @@ class MattermostTest extends TestCase
 
         $this->client = new MatermostClient(
             $httpClient,
-            'http://matermost:8065/hooks/zpa6oput77r93x9usckmimjwmr',// вебхук zpa6oput77r93x9usckmimjwmr настраивается через админку матермоста в докере
+            'http://matermost:8065/hooks/zpa6oput77r93x9usckmimjwmr', // вебхук zpa6oput77r93x9usckmimjwmr настраивается через админку матермоста в докере
             'tester'
         );
     }
