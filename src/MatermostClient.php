@@ -2,6 +2,7 @@
 
 namespace MagDv\Mattermost;
 
+use Nyholm\Psr7\Request;
 use Psr\Http\Client\ClientInterface;
 
 class MatermostClient implements MattermostClientInterface
@@ -18,24 +19,26 @@ class MatermostClient implements MattermostClientInterface
         $requestPayload = $message->toArray();
         $requestPayload['username'] = $this->username;
 
+        $req = new Request(
+            'POST',
+            $this->webHookUrl,
+            [
+                'Content-Type' => 'application/json',
+                'timeout' => 5
+            ],
+            JsonHelper::jsonEncode($requestPayload, true)
+        );
+
         try {
-            $response = $this->client->request(
-                'POST',
-                $this->webHookUrl,
-                [
-                    'headers' => [
-                        'Content-Type' => 'application/json'
-                    ],
-                    'body' => JsonHelper::jsonEncode($requestPayload, true),
-                    'timeout' => 5
-                ]
+            $response = $this->client->sendRequest(
+                $req
             );
         } catch (\Throwable $e) {
             throw new MattermostException('Ошибка клиента: ' . $e->getMessage());
         }
 
         if (!$this->isOk($response->getStatusCode())) {
-            throw new MattermostException('Ошибка при отправке запроса: ' . $response->getBody());
+            throw new MattermostException('Ошибка при отправке запроса: ' . $response->getBody()->getContents());
         }
     }
 

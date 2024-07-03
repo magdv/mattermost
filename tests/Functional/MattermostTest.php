@@ -29,7 +29,7 @@ class MattermostTest extends TestCase
 
         $this->client = new MatermostClient(
             $httpClient,
-            'http://matermost:8065/hooks/zpa6oput77r93x9usckmimjwmr', // вебхук zpa6oput77r93x9usckmimjwmr настраивается через админку матермоста в докере
+            'http://matermost:8065/hooks/efda5cy35tyax89x3edegtbjjo', // вебхук zpa6oput77r93x9usckmimjwmr настраивается через админку матермоста в докере
             'tester'
         );
     }

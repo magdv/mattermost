@@ -32,7 +32,7 @@ class ClientTest extends TestCase
 
         $client = new MatermostClient(
             $mockClient,
-            'http://matermost:8065/hooks/dui7ons8et8sxpuhdxxj4todfw',
+            'http://matermost:8065/hooks/efda5cy35tyax89x3edegtbjjo',
             'test'
         );
         $client->send($message);
@@ -58,11 +58,11 @@ class ClientTest extends TestCase
 
         $client = new MatermostClient(
             $mockClient,
-            'http://matermost:8065/hooks/dui7ons8et8sxpuhdxxj4todfw',
+            'http://matermost:8065/hooks/efda5cy35tyax89x3edegtbjjo',
             'test'
         );
 
-        $this->expectExceptionMessage('Ошибка клиента: Client error: `POST http://matermost:8065/hooks/dui7ons8et8sxpuhdxxj4todfw` resulted in a `400 Bad Request` response');
+        $this->expectExceptionMessage('Ошибка при отправке запроса: какой - то ответ');
 
         $client->send($message);
     }
@@ -84,11 +84,11 @@ class ClientTest extends TestCase
 
         $client = new MatermostClient(
             $mockClient,
-            'http://matermost:8065/hooks/dui7ons8et8sxpuhdxxj4todfw',
+            'http://matermost:8065/hooks/efda5cy35tyax89x3edegtbjjo',
             'test'
         );
 
-        $this->expectExceptionMessage('Ошибка клиента: Server error: `POST http://matermost:8065/hooks/dui7ons8et8sxpuhdxxj4todfw` resulted in a `500 Internal Server Error` response');
+        $this->expectExceptionMessage('Ошибка при отправке запроса: какой - то ответ');
 
         $client->send($message);
     }
